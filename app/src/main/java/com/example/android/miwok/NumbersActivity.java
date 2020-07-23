@@ -85,16 +85,14 @@ public class NumbersActivity extends AppCompatActivity {
 
         LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
 
-        int index = 0;
-        while(index<words.size()){
-            //Create a new {@link TextView} that displayed the word at
-            //and add the View as achild to the rootView
+       for (int index = 0; index <words.size(); index++)
+        {
+            //Create a new TextView
             TextView wordView = new TextView(this);
+            //Set the text to be word ar the current index
             wordView.setText(words.get(index));
+            //Add this TextView as another child to the root view of this layout
             rootView.addView(wordView);
-
-            //Update counter variable
-            index++; //index = index +1
         }
     }
 }
